@@ -20,16 +20,16 @@ function Body(){
                         <TaskList />
                     </>
                 } />
-                <Route path="/tasks" element={
+                <Route path="/home" element={
                     <>
                         <TaskInput />
                         <TaskList />
                     </>
                 } />
-                <Route path="/notes" element={<>
+                <Route path="/orders" element={<>
                 <Notes /> <NoteList />
                 </>} />
-                <Route path="/reminders" element={<Remainders />} />
+                <Route path="/account" element={<Remainders />} />
             </Routes>
         </div>
     )
