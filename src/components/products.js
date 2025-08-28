@@ -23,7 +23,7 @@ export const products = [
     id: 3,
     title: "Bluetooth Speaker",
     price: 39.99,
-    image: "https://images.pexels.com/photos/63703/speaker-music-sound-63703.jpeg",
+    image: "https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg",
     category: "Electronics",
     description: "Portable Bluetooth speaker with deep bass and waterproof design.",
     stock: 30,

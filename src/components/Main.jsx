@@ -3,7 +3,7 @@ import Menu from "./Menu";
 
 function Main(){
     return(
-        <div className="flex justify-between bg-blue-200 flex-grow">
+        <div className="flex justify-between flex-grow">
             <Menu />
             <Body />
         </div>

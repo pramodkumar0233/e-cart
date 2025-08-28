@@ -21,6 +21,9 @@ function Menu() {
             <Link to="/account" className="bg-gray-50 hover:bg-gray-300 hover:w-[90%] text-center p-2 w-4/5 rounded-full">
                 <h1>Account</h1>
             </Link>
+            <Link to="/fetchedproducts" className="bg-gray-50 hover:bg-gray-300 hover:w-[90%] text-center p-2 w-4/5 rounded-full">
+                <h1>API Products</h1>
+            </Link>
         </div>
     );
 }
