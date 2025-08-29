@@ -6,7 +6,7 @@ import Main from "./components/Main";
 import { ItemProvider } from "./components/ItemContext";
 function App() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col min-h-screen">
       <ItemProvider>
         {/* <NoteProvider> */}
           <Header />

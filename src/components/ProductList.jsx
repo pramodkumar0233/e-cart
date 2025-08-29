@@ -32,7 +32,7 @@ function ProductList() {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div className="flex flex-col flex-grow bg-gray-200 text-center items-center ">
+    <div className="flex flex-col flex-grow bg-gray-200 text-center items-center min-h-screen ">
       <h1>LIST</h1>
       
       {/* Example of rendering fetched data */}

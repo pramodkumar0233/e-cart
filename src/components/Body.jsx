@@ -9,14 +9,16 @@ import CartItems from "./CartItems";
 import API from "./API";
 import Orders from "./Orders";
 import LikedItems from "./LikedItems";
+import ProductList from "./ProductList";
+import Notifications from "./Notifications"
 
 function Body(){
     
     const {Backgroundcolor}=useItems();
-    const {isdarkmode}=useItems();
+    const {isdarkmode,isSidebarOpen}=useItems();
     // const {items}=useItems();
     return(
-        <div className={`w-[80%] ${isdarkmode&&Backgroundcolor} text-center  `}>
+        <div className={` flex flex-grow min-h-screen ${isdarkmode&&Backgroundcolor} w-full text-center ${isSidebarOpen?'ml-0 ':'md:ml-78'} mt-20 h-full  `}>
             <Routes>
                 <Route path="/" element={
                     <>
@@ -38,6 +40,8 @@ function Body(){
                 <Route path="/fetchedproducts" element={<API />} />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/favourites" element={<LikedItems />} />
+                <Route path="/account" element={<ProductList />} />
+                <Route path="/notifications" element={<Notifications />} />
             </Routes>
         </div>
     )

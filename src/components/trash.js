@@ -22,16 +22,16 @@
 // getData();
 // console.log("B. After function call");
 
-async function getData() {
-  console.log("Start fetching...");
-  let res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  let data = await res.json();
-  console.log("Data received:", data.title);
-}
+// async function getData() {
+//   console.log("Start fetching...");
+//   let res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+//   let data = await res.json();
+//   console.log("Data received:", data.title);
+// }
 
-getData();
+// getData();
 
-// Heavy blocking loop
-for (let i = 0; i < 5e9; i++) {} // <- blocks for a few seconds
+// // Heavy blocking loop
+// for (let i = 0; i < 5e9; i++) {} // <- blocks for a few seconds
 
-console.log("Main loop finished");
+// // console.log("Main loop finished");

@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-import { useItems } from "./ItemContext";
+
 function API(){
     const [data,setdata]=useState([]);
+    const [loading,setloading]=useState(true);
 
     useEffect(()=>{
         fetch("https://fakestoreapi.com/products")
         .then(res=>res.json())
         .then(data=>setdata(data))
         .catch(err=>console.log(err))
+        .finally(()=>setloading(false))
     },[]);
+    if(loading) return <div><h1>Loading items....</h1></div>
     
     return(
         <div className="grid grid-cols-2">
