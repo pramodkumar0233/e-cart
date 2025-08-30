@@ -6,7 +6,7 @@ function CartItems(){
         removefromcart(item);
     }
     return(
-            <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-4 ${isdarkmode&&Backgroundcolor} w-full `} >
+            <div className={`grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 p-4 ${isdarkmode&&Backgroundcolor} w-full `} >
                 {cartitems.length===0?<h1>CART IS EMPTY</h1>:
                 
                 cartitems.map((item)=>(

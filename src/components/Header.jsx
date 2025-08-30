@@ -1,11 +1,9 @@
 import { useState } from "react";
-import {Link ,useNavigate,Navigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import { useItems } from "./ItemContext";
 import { Sun, Moon, Bell, ShoppingCartIcon, Heart, Menu, X } from 'lucide-react';
 import Notifications from "./Notifications";
 import Modal from "./UI/Model";
-import CartItems from "./CartItems";
-import LikedItems from "./LikedItems";
 
 function Header() {
   const navigate=useNavigate();
