@@ -3,14 +3,13 @@ import { orders } from "../dummy-data/dummyData";
 function Orders() {
     const getformatdate=(dateString) => {
         const date = new Date(dateString);
-
-    const formattedDate = new Intl.DateTimeFormat('en-US', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-}).format(date);
-return formattedDate;
-    }
+        const formattedDate = new Intl.DateTimeFormat('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+        }).format(date);
+    return formattedDate;
+  }
   return (
     <div className="p-4 w-full">
       {orders.length === 0 ? (
