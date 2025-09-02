@@ -10,9 +10,9 @@ function LikedItems(){
                 likeditems.map((item)=>(
                 <div key={item.id} className="hover:scale-103">
                     <div className="h-30 lg:h-50">
-                        {/* <img 
+                        <img 
                             src={item.image} 
-                            alt={item.title} className="w-full h-full rounded object-cover" /> */}
+                            alt={item.title} className="w-full h-full rounded object-cover" />
                     </div>
                     <div className="flex justify-between py-5 items-center">
                         <h3 className="font-bold truncate text-sm md:text-xl">{item.title}</h3>

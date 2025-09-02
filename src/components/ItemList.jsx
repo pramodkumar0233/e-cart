@@ -24,9 +24,9 @@ function ItemList(){
                 {items.map((item)=>(
                 <div key={item.id} className="hover:scale-103 relative ">
                     <div className="h-30 lg:h-50">
-                        {/* <img 
+                        <img 
                     src={item.image} 
-                    alt={item.title} className="w-full h-full object-cover rounded-lg" loading="lazy"/> */}
+                    alt={item.title} className="w-full h-full object-cover rounded-lg" loading="lazy"/>
                     <Heart size={32} color={likeditems.includes(item)?'red':'black'} fill={likeditems.includes(item)?'red':'none'} onClick={()=>handlelike(item)}
                         className={`absolute top-2 right-2 cursor-pointer hover:bg-gray-300 rounded-full p-1 `}
                         // onClick={() => handleFavorite(item.id)}
