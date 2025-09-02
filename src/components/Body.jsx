@@ -1,5 +1,5 @@
-// import { useState } from "react";
-import { Routes,Route } from "react-router-dom";
+// src/components/Body.jsx
+import { Routes,Route } from "react-router-dom"; // Note: HashRouter has been removed
 // import { useEffect } from "react";
 // import ItemList from "./ItemList";
 // import Remainders from "./Remainders";
@@ -19,6 +19,7 @@ function Body(){
     // const {items}=useItems();
     return(
         <div className={` flex flex-grow min-h-screen ${isdarkmode&&Backgroundcolor} w-full text-center ${isSidebarOpen?'ml-0 ':'md:ml-78'} mt-20 h-full  `}>
+         
             <Routes>
                 <Route path="/" element={
                     <>
@@ -43,6 +44,7 @@ function Body(){
                 <Route path="/account" element={<ProductList />} />
                 <Route path="/notifications" element={<Notifications />} />
             </Routes>
+            
         </div>
     )
 }
