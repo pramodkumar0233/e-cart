@@ -1,20 +1,20 @@
 import { useState } from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useItems } from "./ItemContext";
 import { Sun, Moon, Bell, ShoppingCartIcon, Heart, Menu, X } from 'lucide-react';
 import Notifications from "./Notifications";
 import Modal from "./UI/Model";
 
 function Header() {
-  const navigate=useNavigate();
-  const { isdarkmode, togglemode, Backgroundcolor, isSidebarOpen, setSidebarOpen } = useItems();
+  const navigate = useNavigate();
+  const { likeditems, cartitems, isdarkmode, togglemode, Backgroundcolor, isSidebarOpen, setSidebarOpen } = useItems();
   const [isNotifOpen, setNotifOpen] = useState(false);
 
   const handleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
-  const gotocart=()=>{ navigate("/cart") }
-  const gotoliked=()=>{ navigate('/favourites') }
+  const gotocart = () => { navigate("/cart") }
+  const gotoliked = () => { navigate('/favourites') }
 
   return (
     <div className={`flex justify-between fixed z-50 top-0 left-0 shadow-md bg-[#3C4043] text-white w-full items-center border-b border-[#3C4043] ${isdarkmode && Backgroundcolor}`}>
@@ -34,11 +34,17 @@ function Header() {
           <Bell />
         </button>
 
-        <button onClick={gotoliked} className={`${isdarkmode ? "text-white hover:bg-gray-100" : ""} hover:shadow-xl hover:cursor-pointer hover:bg-gray-300 p-2 m-1 md:m-3 rounded-full`}>
+        <button onClick={gotoliked} className={`${isdarkmode ? "text-white hover:bg-gray-100" : ""} hover:shadow-xl hover:cursor-pointer hover:bg-gray-300 p-2 m-1 md:m-3 rounded-full relative`}>
           <Heart />
+          <div className="  absolute  right-1 bottom-2 min-w-3 h-3 w-auto rounded-full text-[10px] bg-blue-400 flex items-center justify-center p-1" >
+          {likeditems.length}
+          </div>
         </button>
-        <button onClick={gotocart} className={`${isdarkmode ? "text-white hover:bg-gray-100" : ""} hover:shadow-xl hover:cursor-pointer hover:bg-gray-300 p-2 m-1 md:m-3 rounded-full`}>
-          <ShoppingCartIcon />
+        <button onClick={gotocart} className={`${isdarkmode ? "text-white hover:bg-gray-100" : ""} hover:shadow-xl hover:cursor-pointer hover:bg-gray-300 p-2 m-1 md:m-3 rounded-full relative`}>
+        <ShoppingCartIcon  />
+        <div className="  absolute  right-1 bottom-2 min-w-3 h-3 w-auto rounded-full text-[10px] bg-red-600 flex items-center justify-center p-1" >
+          {cartitems.length}
+          </div>
         </button>
 
         <button onClick={togglemode} className={`${isdarkmode ? " text-black" : " text-white"} hover:cursor-pointer p-2 m-1 md:m-3 rounded-full`}>
